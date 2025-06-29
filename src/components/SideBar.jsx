@@ -46,7 +46,8 @@ export default function Sidebar() {
       window.matchMedia("(prefers-color-scheme: dark)").matches)
   );
 
-  useEffect(() => {
+ useEffect(() => {
+  if (typeof window !== "undefined") {
     const root = document.documentElement;
     if (isDark) {
       root.classList.add("dark");
@@ -55,7 +56,9 @@ export default function Sidebar() {
       root.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-  }, [isDark]);
+  }
+}, [isDark]);
+
 
   const toggleTheme = () => setIsDark((prev) => !prev);
 
