@@ -15,7 +15,6 @@ const navLinks = [
   { href: "#about", label: "About", icon: <FaUser /> },
   { href: "#experience", label: "Experience", icon: <FaBriefcase /> },
   { href: "#projects", label: "Projects", icon: <FaFolderOpen /> },
-  
   { href: "#contact", label: "Contact", icon: <FaEnvelope /> },
 ];
 
@@ -80,7 +79,7 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Desktop sidebar */}
+      {/* Desktop Sidebar */}
       <div className="hidden md:block fixed left-4 top-1/2 -translate-y-1/2 z-50">
         <motion.aside
           className="flex flex-col items-center bg-white/80 dark:bg-[#101014]/80 rounded-2xl py-4 px-2 shadow-lg border border-gray-300 dark:border-[#232323] backdrop-blur transition-colors"
@@ -117,7 +116,7 @@ export default function Sidebar() {
                       initial={{ opacity: 0, x: 0 }}
                       animate={{ opacity: 1, x: 16 }}
                       exit={{ opacity: 0, x: 0 }}
-                      className={`absolute left-12 px-3 py-1 rounded-lg text-sm font-medium bg-gray-100 dark:bg-[#18181b] text-gray-700 dark:text-gray-300 shadow whitespace-nowrap`}
+                      className="absolute left-12 px-3 py-1 rounded-lg text-sm font-medium bg-gray-100 dark:bg-[#18181b] text-gray-700 dark:text-gray-300 shadow whitespace-nowrap"
                     >
                       {link.label}
                     </motion.span>
@@ -130,7 +129,7 @@ export default function Sidebar() {
           {/* Divider */}
           <div className="w-10 h-[1px] bg-gray-300 dark:bg-gray-700 my-3" />
 
-          {/* Theme toggle in sidebar */}
+          {/* Theme toggle in desktop sidebar */}
           <div className="relative my-2 flex items-center">
             <motion.button
               onClick={toggleTheme}
@@ -159,7 +158,7 @@ export default function Sidebar() {
         </motion.aside>
       </div>
 
-      {/* Mobile dock */}
+      {/* Mobile Dock */}
       <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[95vw] max-w-md">
         <motion.nav
           className="flex flex-row items-center justify-between bg-white/90 dark:bg-[#101014]/90 rounded-2xl py-2 px-4 shadow-lg border border-gray-300 dark:border-[#232323] backdrop-blur transition-colors"
@@ -191,6 +190,24 @@ export default function Sidebar() {
               </a>
             );
           })}
+
+          {/* Mobile theme toggle button */}
+          <button
+            onClick={toggleTheme}
+            className="flex flex-col items-center justify-center w-10 h-10 rounded-lg group transition-colors"
+            aria-label="Toggle Theme"
+          >
+            <span
+              className={`text-xl ${
+                isDark ? "text-white" : "text-black"
+              } group-hover:scale-110 transition`}
+            >
+              {isDark ? <FaSun /> : <FaMoon />}
+            </span>
+            <span className="text-[10px] mt-1 text-gray-500 dark:text-gray-400">
+              {isDark ? "Light" : "Dark"}
+            </span>
+          </button>
         </motion.nav>
       </div>
     </>
