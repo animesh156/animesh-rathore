@@ -54,7 +54,6 @@ const projects = [
   },
 ];
 
-
 export default function Projects() {
   return (
     <section
@@ -67,10 +66,23 @@ export default function Projects() {
       >
         <Underline classname="pb-2">Projects I have worked on</Underline>
       </motion.h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {projects.map((project) => (
           <PinContainer key={project.name} {...project} />
         ))}
+      </div>
+
+      {/* View More Projects Button */}
+      <div className="mt-8 flex justify-center">
+        <a
+          href="https://github.com/animesh156"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-semibold transition"
+        >
+          View More Projects →
+        </a>
       </div>
     </section>
   );
