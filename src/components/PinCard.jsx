@@ -160,7 +160,7 @@ export function PinContainer({
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 px-4 py-2 rounded-lg bg-black dark:bg-white text-sm text-white dark:text-black font-light hover:bg-zinc-900 dark:hover:bg-zinc-300 transition text-center flex items-center justify-center gap-2"
+                className="flex-1 px-4 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-sm text-zinc-500 dark:text-white font-light hover:bg-zinc-900 dark:hover:bg-zinc-300 transition text-center flex items-center justify-center gap-2"
                 onClick={(e) => e.stopPropagation()}
               >
                 <FaGithub />

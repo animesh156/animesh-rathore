@@ -6,38 +6,23 @@ import Underline from "./Underline";
 const projects = [
   {
     name: "MetMed",
-    description: "Ultimate Digital Habit Builder",
-    tech: [
-      "React",
-      "MongoDB",
-      "Express",
-      "Node.js",
-      "Firebase",
-      "TailwindCSS",
-     
-    ],
+    description: "Doctor–Patient Appointment Booking Platform",
+    tech: ["React", "MongoDB", "Express", "Node.js", "Firebase", "TailwindCSS"],
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1750966183/Screenshot_384_gt5883.png",
     href: "https://github.com/animesh156/MetMed",
     preview: "https://met-med.vercel.app/",
   },
   {
     name: "AutoCV",
-    description: "AI Powered Learning Companion",
-    tech: [
-      "React",
-      "MongoDB",
-      "Express",
-      "Node.js",
-      "TailwindCSS",
-      "Firebase",
-    ],
+    description: "AI-Powered Resume & Cover Letter Generator",
+    tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS", "Firebase"],
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1750966469/Screenshot_385_pax9lz.png",
     href: "https://github.com/animesh156/AI-Resume-Cover-Letter-Builder",
     preview: "https://opencv-psi.vercel.app/",
   },
   {
     name: "RecycLink",
-    description: "AI Powered Influencer Analytics",
+    description: "Waste Management & Recycling Marketplace",
     tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS"],
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028788/uuijbsx8qq9q65rktaao.png",
     href: "https://github.com/animesh156/RecycLink",
@@ -45,51 +30,30 @@ const projects = [
   },
   {
     name: "Chat App",
-    description: "Real-time chat app",
-    tech: [
-      "React",
-      "MongoDB",
-      "Express",
-      "Node.js",
-      "TailwindCSS",
-      "Socket.io",
-    ],
+    description: "Real-Time Messaging App",
+    tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS", "Socket.io"],
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028959/yqopk4eqff7w6w8vb12a.png",
     href: "https://github.com/animesh156/chat-web-app",
     preview: "https://chatpy-kkfy.onrender.com",
   },
-
-   {
+  {
     name: "Quizzy",
-    description: "Interactive Quiz App",
-    tech: [
-      "React",
-      "MongoDB",
-      "Express",
-      "Node.js",
-      "TailwindCSS",
-      "Socket.io",
-    ],
+    description: "Interactive Quiz Application",
+    tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS", "Socket.io"],
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028881/zg48ye3isoizobkolikp.png",
     href: "https://github.com/animesh156/quiz-app",
     preview: "https://quiz-app-frontend-blush.vercel.app/",
   },
-
-   {
+  {
     name: "MindWell",
-    description: "Real-time chat app",
-    tech: [
-      "React",
-      "MongoDB",
-      "Express",
-      "Node.js",
-      "TailwindCSS",
-    ],
+    description: "Mental Wellness & Self-Care Support App",
+    tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS"],
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028934/gbqfnrtx8wu097v8a7v7.png",
     href: "https://github.com/animesh156/mental-wellness-app",
     preview: "https://mental-wellness-iota.vercel.app/",
   },
 ];
+
 
 export default function Projects() {
   return (

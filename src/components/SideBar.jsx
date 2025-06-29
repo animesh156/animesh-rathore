@@ -4,7 +4,7 @@ import {
   FaHome,
   FaUser,
   FaEnvelope,
-  FaTrophy,
+  FaBriefcase,
   FaFolderOpen,
   FaMoon,
   FaSun,
@@ -13,8 +13,9 @@ import {
 const navLinks = [
   { href: "#home", label: "Home", icon: <FaHome /> },
   { href: "#about", label: "About", icon: <FaUser /> },
+  { href: "#experience", label: "Experience", icon: <FaBriefcase /> },
   { href: "#projects", label: "Projects", icon: <FaFolderOpen /> },
-  { href: "#achievements", label: "Achievements", icon: <FaTrophy /> },
+  
   { href: "#contact", label: "Contact", icon: <FaEnvelope /> },
 ];
 
