@@ -106,7 +106,7 @@ export default function ContactSection() {
           </form>
 
           <span className="text-xs text-gray-600 dark:text-gray-400 mt-4">
-            animeshrathore@gmail.com
+            animeshrathore255@gmail.com
           </span>
         </div>
       </section>
