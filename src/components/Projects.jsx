@@ -13,7 +13,7 @@ const projects = [
     preview: "https://met-med.vercel.app/",
   },
   {
-    name: "AutoCV",
+    name: "GenCV",
     description: "AI-Powered Resume & Cover Letter Generator",
     tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS", "Firebase"],
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1750966469/Screenshot_385_pax9lz.png",
