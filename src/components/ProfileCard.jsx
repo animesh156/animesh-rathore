@@ -48,12 +48,12 @@ export default function ProfileCard() {
       <div className="flex flex-col gap-2 md:gap-4">
         {/* Name and animated title */}
         <div className="flex flex-col gap-1 md:gap-2 relative">
-          <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#6c3483] dark:text-[#f5f5f7]">
+          <div className="text-lg sm:text-xl md:text-2xl font-bold text-gray-600 dark:text-[#f5f5f7]">
             Animesh Rathore
           </div>
 
           {/* Typing animation */}
-          <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
+          <div className="text-xs md:text-sm  text-[#bf58e7] whitespace-nowrap">
             {text}
             <span className="animate-pulse">|</span>
           </div>
