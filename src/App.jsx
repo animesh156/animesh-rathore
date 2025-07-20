@@ -45,9 +45,25 @@ export default function App() {
           </p>
         </section>
 
-        <section id="github" className="mb-10 md:mb-20 max-w-[98vw] md:w-2xl">
-          <GithubGraph username="animesh156" />
-        </section>
+        <section id="github" className="mb-10 md:mb-20 max-w-[98vw] md:w-2xl w-full">
+  <motion.h2
+    className="text-2xl md:text-3xl font-semibold text-neutral-800 dark:text-white mb-6 text-center"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+  >
+    <Underline>My GitHub Activity</Underline>
+  </motion.h2>
+
+  <motion.div
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.6, delay: 0.1 }}
+  >
+    <GithubGraph username="animesh156" />
+  </motion.div>
+</section>
+
 
         <TechMarquee />
 
