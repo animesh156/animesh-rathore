@@ -29,7 +29,7 @@ const projects = [
     preview: "https://recyc-link-beta.vercel.app/",
   },
   {
-    name: "Chat App",
+    name: "Chatpy",
     description: "Real-Time Messaging App",
     tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS", "Socket.io"],
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028959/yqopk4eqff7w6w8vb12a.png",
