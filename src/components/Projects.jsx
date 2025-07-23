@@ -11,6 +11,7 @@ const projects = [
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1750966183/Screenshot_384_gt5883.png",
     href: "https://github.com/animesh156/MetMed",
     preview: "https://met-med.vercel.app/",
+    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263785/metmed_imvlqg.mp4"
   },
   {
     name: "GenCV",
@@ -19,6 +20,7 @@ const projects = [
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1750966469/Screenshot_385_pax9lz.png",
     href: "https://github.com/animesh156/AI-Resume-Cover-Letter-Builder",
     preview: "https://opencv-psi.vercel.app/",
+     videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263827/genCV_zihjx1.mp4"
   },
   {
     name: "RecycLink",
@@ -27,6 +29,7 @@ const projects = [
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028788/uuijbsx8qq9q65rktaao.png",
     href: "https://github.com/animesh156/RecycLink",
     preview: "https://recyc-link-beta.vercel.app/",
+     videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263699/recyclink_u6i3pe.mp4"
   },
   {
     name: "Chatpy",
@@ -35,6 +38,7 @@ const projects = [
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028959/yqopk4eqff7w6w8vb12a.png",
     href: "https://github.com/animesh156/chat-web-app",
     preview: "https://chatpy-kkfy.onrender.com",
+     videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263837/chatpy_smfexk.mp4"
   },
   {
     name: "Quizzy",
@@ -43,6 +47,7 @@ const projects = [
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028881/zg48ye3isoizobkolikp.png",
     href: "https://github.com/animesh156/quiz-app",
     preview: "https://quiz-app-frontend-blush.vercel.app/",
+     videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263842/quizapp_rla035.mp4"
   },
   {
     name: "MindWell",
@@ -51,6 +56,7 @@ const projects = [
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028934/gbqfnrtx8wu097v8a7v7.png",
     href: "https://github.com/animesh156/mental-wellness-app",
     preview: "https://mental-wellness-iota.vercel.app/",
+     videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753262596/mindwell_kny2hv.mp4"
   },
 ];
 

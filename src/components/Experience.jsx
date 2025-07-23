@@ -1,11 +1,13 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FaBriefcase } from "react-icons/fa";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaChevronRight, FaChevronDown } from "react-icons/fa";
+import Underline from "./Underline";
 
 const experiences = [
   {
-    role: "Frontend Developer Intern",
+    role: "Frontend Developer",
     company: "WhatBytes",
+    logo: "/whatbytes_logo.jpg",
     duration: "Mar 2025 – Apr 2025",
     description: [
       "Developed Authentication, Blog, and Feature pages, enhancing overall functionality.",
@@ -13,9 +15,11 @@ const experiences = [
       "Integrated an RSS feed to automate content distribution and improve accessibility.",
     ],
   },
-  {
+
+   {
     role: "Frontend Developer (Open Source)",
     company: "Hacktoberfest",
+    logo: "/hacktoberfest.webp",
     duration: "May 2023 – Jul 2023",
     description: [
       "Built UI components like Contact Forms, Footers, and Pricing Cards with dark mode.",
@@ -25,37 +29,86 @@ const experiences = [
 ];
 
 export default function Experience() {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpand = (idx) => {
+    setExpandedIndex(expandedIndex === idx ? null : idx);
+  };
+
   return (
-    <section id="experience" className="max-w-2xl mx-auto px-4 py-12">
-      <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 dark:text-white mb-10">
-        <span className="inline-flex items-center gap-2">
-          <FaBriefcase className="text-purple-500" /> Experience
-        </span>
+    <section
+      id="experience"
+      className="w-full max-w-xs sm:max-w-sm md:max-w-2xl mx-auto mb-16 px-0 sm:px-2 md:px-4 py-8 md:py-12"
+    >
+      <h2 className="text-2xl md:text-2xl font-bold text-left text-gray-800 dark:text-white mb-3">
+        <Underline>Work Experience</Underline>
       </h2>
 
-      <div className="flex flex-col gap-8">
-        {experiences.map((exp, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
-            viewport={{ once: true }}
-            className="border-l-4 border-purple-500 pl-4 py-2"
-          >
-            <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
-              {exp.role}
-            </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-              {exp.company} · <span className="italic">{exp.duration}</span>
-            </p>
-            <ul className="list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300">
-              {exp.description.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
-          </motion.div>
-        ))}
+      <div className="flex flex-col gap-6">
+        {experiences.map((exp, idx) => {
+          const isExpanded = expandedIndex === idx;
+
+          return (
+            <div
+              key={idx}
+              className="transition-all duration-300 group cursor-pointer rounded-xl"
+              onClick={() => toggleExpand(idx)}
+            >
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-2">
+                {/* Left: Logo + Company + Role */}
+                <div className="flex items-center gap-4">
+                  <img
+                    src={exp.logo}
+                    alt={exp.company}
+                    className="w-12 h-12 rounded-full border border-gray-300 object-contain"
+                  />
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-2 relative">
+                      <p className="text-md font-medium text-gray-900 dark:text-white">
+                        {exp.company}
+                      </p>
+                      {/* Animated Arrow - visible only on hover */}
+
+                      <motion.span
+                        initial={false}
+                        animate={{ rotate: isExpanded ? 90 : 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-purple-500"
+                      >
+                        <FaChevronRight size={12} />
+                      </motion.span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                      {exp.role}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right: Duration */}
+                <div className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
+                  {exp.duration}
+                </div>
+              </div>
+
+              {/* Expandable Description */}
+              <AnimatePresence>
+                {isExpanded && (
+                  <motion.ul
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="mt-4 list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300 overflow-hidden"
+                  >
+                    {exp.description.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

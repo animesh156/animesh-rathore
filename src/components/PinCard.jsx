@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 
@@ -11,8 +11,10 @@ export function PinContainer({
   preview,
   className,
   containerClassName,
+  videoUrl
 }) {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const videoRef = useRef(null);
 
   const techs = [
     { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -48,7 +50,14 @@ export function PinContainer({
     setMouse({ x, y });
   };
 
-  const handleMouseLeave = () => setMouse({ x: 0, y: 0 });
+  const handleMouseLeave = () => {
+    setMouse({ x: 0, y: 0 });
+    if (videoRef.current) videoRef.current.pause();
+  };
+
+  const handleMouseEnter = () => {
+    if (videoRef.current) videoRef.current.play();
+  };
 
   const handleCardClick = () => {
     if (href) window.open(href, "_blank", "noopener,noreferrer");
@@ -59,6 +68,7 @@ export function PinContainer({
       className={`group relative z-10 cursor-pointer ${containerClassName || ""}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onMouseEnter={handleMouseEnter}
       tabIndex={-1}
       onClick={handleCardClick}
       role="button"
@@ -81,16 +91,31 @@ export function PinContainer({
           className={`flex flex-col w-[320px] h-[320px] rounded-xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 ${className}`}
           style={{ transformStyle: "preserve-3d" }}
         >
-          <div className="w-full flex items-center justify-center p-4 pb-0">
-            <img
-              src={image}
-              alt={name}
-              className="object-cover w-full h-36 rounded-lg"
-              loading="lazy"
-              style={{ boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)" }}
-            />
+          {/* Video/Image Preview */}
+          <div className="w-full flex items-center justify-center p-4 pb-0 group">
+            {videoUrl?.includes(".mp4") ? (
+              <video
+                ref={videoRef}
+                src={videoUrl}
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                className="w-full h-36 object-cover rounded-lg transition duration-300"
+                style={{ boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)" }}
+              />
+            ) : (
+              <img
+                src={image}
+                alt={name}
+                className="object-cover w-full h-36 rounded-lg"
+                loading="lazy"
+                style={{ boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)" }}
+              />
+            )}
           </div>
 
+          {/* Title + Desc */}
           <div className="flex flex-col gap-1 px-4 py-3 w-full flex-1">
             <motion.span
               className="text-base font-semibold text-black dark:text-white truncate"
@@ -117,6 +142,7 @@ export function PinContainer({
               {description}
             </motion.span>
 
+            {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 items-center mt-2">
               {tech.map((t) => {
                 const found = techs.find(
@@ -140,16 +166,18 @@ export function PinContainer({
               })}
             </div>
 
+            {/* Buttons */}
             <div className="flex flex-row gap-2 mt-auto w-full">
               {preview ? (
                 <a
                   href={preview}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 px-4 py-2 rounded-lg bg-zinc-200 dark:bg-zinc-800 text-sm text-black dark:text-white font-light hover:bg-zinc-300 dark:hover:bg-zinc-700 transition text-center flex items-center justify-center gap-2"
+                  className="flex-1 px-4 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-sm text-black dark:text-white font-light hover:bg-zinc-300 dark:hover:bg-zinc-700 transition text-center flex items-center justify-center gap-2"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  Live Preview
+                  <span className="animate-pulse text-red-500">●</span>
+                  Live
                 </a>
               ) : (
                 <span className="flex-1 px-4 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-sm text-zinc-500 font-light cursor-not-allowed select-none text-center flex items-center justify-center gap-2">
@@ -160,7 +188,7 @@ export function PinContainer({
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 px-4 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-sm text-zinc-500 dark:text-white font-light hover:bg-zinc-900 dark:hover:bg-zinc-300 transition text-center flex items-center justify-center gap-2"
+                className="flex-1 px-4 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-sm text-zinc-500 dark:text-white font-light hover:bg-zinc-300 dark:hover:bg-zinc-700 transition text-center flex items-center justify-center gap-2"
                 onClick={(e) => e.stopPropagation()}
               >
                 <FaGithub />
