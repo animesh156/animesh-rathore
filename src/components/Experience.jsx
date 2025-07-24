@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaChevronRight, FaChevronDown } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 import Underline from "./Underline";
 
 const experiences = [
@@ -15,8 +15,7 @@ const experiences = [
       "Integrated an RSS feed to automate content distribution and improve accessibility.",
     ],
   },
-
-   {
+  {
     role: "Frontend Developer (Open Source)",
     company: "Hacktoberfest",
     logo: "/hacktoberfest.webp",
@@ -28,6 +27,19 @@ const experiences = [
   },
 ];
 
+// Animation variants
+const slideInLeft = {
+  hidden: { opacity: 0, x: -100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 export default function Experience() {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
@@ -36,9 +48,13 @@ export default function Experience() {
   };
 
   return (
-    <section
+    <motion.section
       id="experience"
       className="w-full max-w-xs sm:max-w-sm md:max-w-2xl mx-auto mb-16 px-0 sm:px-2 md:px-4 py-8 md:py-12"
+      variants={slideInLeft}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
     >
       <h2 className="text-2xl md:text-2xl font-bold text-left text-gray-800 dark:text-white mb-3">
         <Underline>Work Experience</Underline>
@@ -67,7 +83,6 @@ export default function Experience() {
                       <p className="text-md font-medium text-gray-900 dark:text-white">
                         {exp.company}
                       </p>
-                      {/* Animated Arrow - visible only on hover */}
 
                       <motion.span
                         initial={false}
@@ -110,6 +125,6 @@ export default function Experience() {
           );
         })}
       </div>
-    </section>
+    </motion.section>
   );
 }

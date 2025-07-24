@@ -20,7 +20,7 @@ const projects = [
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1750966469/Screenshot_385_pax9lz.png",
     href: "https://github.com/animesh156/AI-Resume-Cover-Letter-Builder",
     preview: "https://opencv-psi.vercel.app/",
-     videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263827/genCV_zihjx1.mp4"
+    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263827/genCV_zihjx1.mp4"
   },
   {
     name: "RecycLink",
@@ -29,7 +29,7 @@ const projects = [
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028788/uuijbsx8qq9q65rktaao.png",
     href: "https://github.com/animesh156/RecycLink",
     preview: "https://recyc-link-beta.vercel.app/",
-     videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263699/recyclink_u6i3pe.mp4"
+    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263699/recyclink_u6i3pe.mp4"
   },
   {
     name: "Chatpy",
@@ -38,7 +38,7 @@ const projects = [
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028959/yqopk4eqff7w6w8vb12a.png",
     href: "https://github.com/animesh156/chat-web-app",
     preview: "https://chatpy-kkfy.onrender.com",
-     videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263837/chatpy_smfexk.mp4"
+    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263837/chatpy_smfexk.mp4"
   },
   {
     name: "Quizzy",
@@ -47,7 +47,7 @@ const projects = [
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028881/zg48ye3isoizobkolikp.png",
     href: "https://github.com/animesh156/quiz-app",
     preview: "https://quiz-app-frontend-blush.vercel.app/",
-     videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263842/quizapp_rla035.mp4"
+    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263842/quizapp_rla035.mp4"
   },
   {
     name: "MindWell",
@@ -56,15 +56,24 @@ const projects = [
     image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028934/gbqfnrtx8wu097v8a7v7.png",
     href: "https://github.com/animesh156/mental-wellness-app",
     preview: "https://mental-wellness-iota.vercel.app/",
-     videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753262596/mindwell_kny2hv.mp4"
+    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753262596/mindwell_kny2hv.mp4"
   },
 ];
 
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
 export default function Projects() {
   return (
-    <section
+    <motion.section
       id="projects"
       className="w-full max-w-xs sm:max-w-sm md:max-w-2xl mx-auto mb-16 px-0 sm:px-2 md:px-4 py-8 md:py-12"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInLeft}
     >
       <motion.h2
         className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-left text-neutral-800 dark:text-white tracking-tight"
@@ -74,13 +83,26 @@ export default function Projects() {
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-        {projects.map((project) => (
-          <PinContainer key={project.name} {...project} />
+        {projects.map((project, i) => (
+          <motion.div
+            key={project.name}
+            variants={fadeInLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <PinContainer {...project} />
+          </motion.div>
         ))}
       </div>
 
-      {/* View More Projects Button */}
-      <div className="mt-8 flex justify-center">
+      <motion.div
+        className="mt-8 flex justify-center"
+        variants={fadeInLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <a
           href="https://github.com/animesh156"
           target="_blank"
@@ -89,7 +111,7 @@ export default function Projects() {
         >
           View More Projects →
         </a>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
