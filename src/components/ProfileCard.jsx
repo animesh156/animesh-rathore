@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   FaGithub,
   FaLinkedin,
@@ -7,6 +7,7 @@ import {
   FaTwitter,
   FaDownload,
 } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
 
 export default function ProfileCard() {
   const titles = [
@@ -21,6 +22,9 @@ export default function ProfileCard() {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     const current = titles[index % titles.length];
@@ -44,7 +48,18 @@ export default function ProfileCard() {
   }, [subIndex, isDeleting, index]);
 
   return (
-    <div className="w-full max-w-full md:max-w-2xl mx-auto bg-white dark:bg-[#18181b] rounded-xl shadow-lg p-4 sm:p-6 md:p-7 mb-8 flex flex-col gap-3 md:gap-4 border border-gray-200 dark:border-[#232323] text-left transition-colors">
+    <motion.div
+  ref={ref}
+  initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
+  animate={{
+    opacity: isInView ? 1 : 0,
+    y: isInView ? 0 : 40,
+    filter: isInView ? "blur(0px)" : "blur(6px)",
+  }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="w-full max-w-full md:max-w-2xl mx-auto bg-white dark:bg-[#18181b] rounded-xl shadow-lg p-4 sm:p-6 md:p-7 mb-8 flex flex-col gap-3 md:gap-4 border border-gray-200 dark:border-[#232323] text-left transition-colors"
+>
+
       <div className="flex flex-col gap-2 md:gap-4">
         {/* Name and animated title */}
         <div className="flex flex-col gap-1 md:gap-2 relative">
@@ -53,7 +68,7 @@ export default function ProfileCard() {
           </div>
 
           {/* Typing animation */}
-          <div className="text-xs md:text-sm  text-[#bf58e7] whitespace-nowrap">
+          <div className="text-xs md:text-sm text-[#bf58e7] whitespace-nowrap">
             {text}
             <span className="animate-pulse">|</span>
           </div>
@@ -85,7 +100,7 @@ export default function ProfileCard() {
             <FaMapMarkerAlt /> Darbhanga, India
           </div>
           <a
-            href="mailto:theromeirofernandes@gmail.com"
+            href="mailto:animeshrathore255@gmail.com"
             className="flex items-center gap-2 text-xs md:text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
           >
             <FaEnvelope /> animeshrathore255@gmail.com
@@ -117,6 +132,6 @@ export default function ProfileCard() {
       <div className="mt-2 font-semibold md:mt-4 text-xs md:text-sm text-gray-600 dark:text-gray-300">
         Dedicated. Adaptable. Curious.
       </div>
-    </div>
+    </motion.div>
   );
 }
