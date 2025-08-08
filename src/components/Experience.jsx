@@ -19,7 +19,7 @@ const experiences = [
     role: "Frontend Developer (Open Source)",
     company: "Hacktoberfest",
     logo: "/hacktoberfest.webp",
-    duration: "May 2023 – Jul 2023",
+    duration: "Oct 2022 – Oct 2022",
     description: [
       "Built UI components like Contact Forms, Footers, and Pricing Cards with dark mode.",
       "Resolved bugs in Social Media Icons Footer to enhance usability and responsiveness.",
