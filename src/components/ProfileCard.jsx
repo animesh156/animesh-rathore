@@ -117,7 +117,7 @@ export default function ProfileCard() {
 
           {/* Resume Download Button */}
           <a
-            href="https://drive.google.com/file/d/1KPzwmKMY7lLUhfmvTRE8ZGDwEloUntNd/view?usp=sharing"
+            href="https://drive.google.com/file/d/1HhbyBcN46fe9L6UdrPl-j7EHl-KdBx9D/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-xs md:text-sm text-gray-600 dark:text-gray-400 hover:underline mt-1 font-medium"
