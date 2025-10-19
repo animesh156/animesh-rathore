@@ -8,61 +8,100 @@ const projects = [
     name: "MetMed",
     description: "Doctor–Patient Appointment Booking Platform",
     tech: ["React", "MongoDB", "Express", "Node.js", "Firebase", "TailwindCSS"],
-    image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1750966183/Screenshot_384_gt5883.png",
+    image:
+      "https://res.cloudinary.com/dmdlgpurh/image/upload/v1750966183/Screenshot_384_gt5883.png",
     href: "https://github.com/animesh156/MetMed",
     preview: "https://met-med.vercel.app/",
-    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263785/metmed_imvlqg.mp4"
+    videoUrl:
+      "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263785/metmed_imvlqg.mp4",
   },
   {
     name: "GenCV",
     description: "AI-Powered Resume & Cover Letter Generator",
     tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS", "Firebase"],
-    image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1750966469/Screenshot_385_pax9lz.png",
+    image:
+      "https://res.cloudinary.com/dmdlgpurh/image/upload/v1750966469/Screenshot_385_pax9lz.png",
     href: "https://github.com/animesh156/AI-Resume-Cover-Letter-Builder",
     preview: "https://opencv-psi.vercel.app/",
-    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263827/genCV_zihjx1.mp4"
+    videoUrl:
+      "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263827/genCV_zihjx1.mp4",
   },
   {
     name: "RecycLink",
     description: "Waste Management & Recycling Marketplace",
     tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS"],
-    image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028788/uuijbsx8qq9q65rktaao.png",
+    image:
+      "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028788/uuijbsx8qq9q65rktaao.png",
     href: "https://github.com/animesh156/RecycLink",
     preview: "https://recyc-link-beta.vercel.app/",
-    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263699/recyclink_u6i3pe.mp4"
+    videoUrl:
+      "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263699/recyclink_u6i3pe.mp4",
   },
   {
     name: "Chatpy",
     description: "Real-Time Messaging App",
-    tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS", "Socket.io"],
-    image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028959/yqopk4eqff7w6w8vb12a.png",
+    tech: [
+      "React",
+      "MongoDB",
+      "Express",
+      "Node.js",
+      "TailwindCSS",
+      "Socket.io",
+    ],
+    image:
+      "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028959/yqopk4eqff7w6w8vb12a.png",
     href: "https://github.com/animesh156/chat-web-app",
     preview: "https://chatpy-kkfy.onrender.com",
-    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263837/chatpy_smfexk.mp4"
+    videoUrl:
+      "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263837/chatpy_smfexk.mp4",
   },
   {
     name: "Quizzy",
     description: "Interactive Quiz Application",
-    tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS", "Socket.io"],
-    image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028881/zg48ye3isoizobkolikp.png",
+    tech: [
+      "React",
+      "MongoDB",
+      "Express",
+      "Node.js",
+      "TailwindCSS",
+      "Socket.io",
+    ],
+    image:
+      "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028881/zg48ye3isoizobkolikp.png",
     href: "https://github.com/animesh156/quiz-app",
     preview: "https://quiz-app-frontend-blush.vercel.app/",
-    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263842/quizapp_rla035.mp4"
+    videoUrl:
+      "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263842/quizapp_rla035.mp4",
+  },
+
+  {
+    name: "StreamForge",
+    description:
+      "Real-time Livestream Overlay Platform.",
+    tech: ["React", "Flask", "MongoDB", "TailwindCSS", "FFmpeg", "HLS.js"],
+    image:
+      "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028881/zg48ye3isoizobkolikp.png",
+    href: "https://github.com/animesh156/LiveStream",
+    preview: "https://livestream-overlay.vercel.app/",
+    videoUrl:
+      "https://res.cloudinary.com/drbrkl0un/video/upload/v1760859919/livestream_1_v7upoi.mp4",
   },
   {
     name: "MindWell",
     description: "Mental Wellness & Self-Care Support App",
     tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS"],
-    image: "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028934/gbqfnrtx8wu097v8a7v7.png",
+    image:
+      "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028934/gbqfnrtx8wu097v8a7v7.png",
     href: "https://github.com/animesh156/mental-wellness-app",
     preview: "https://mental-wellness-iota.vercel.app/",
-    videoUrl: "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753262596/mindwell_kny2hv.mp4"
+    videoUrl:
+      "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753262596/mindwell_kny2hv.mp4",
   },
 ];
 
 const fadeInLeft = {
   hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 export default function Projects() {
