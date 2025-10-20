@@ -82,7 +82,7 @@ const projects = [
     image:
       "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028881/zg48ye3isoizobkolikp.png",
     href: "https://github.com/animesh156/LiveStream",
-    preview: "https://livestream-overlay.vercel.app/",
+    
     videoUrl:
       "https://res.cloudinary.com/drbrkl0un/video/upload/v1760859919/livestream_1_v7upoi.mp4",
   },
