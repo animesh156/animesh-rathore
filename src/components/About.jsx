@@ -8,7 +8,7 @@ function About() {
       id="about"
       className="mt-4 md:mt-12 mb-10 md:mb-20 w-full max-w-[98vw] md:max-w-2xl"
     >
-      {/* 💠 Add blur animation to about text */}
+      {/* 💠 About Section with smooth fade-up animation */}
       <motion.div
         initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -19,27 +19,28 @@ function About() {
           className="dark:text-gray-300 text-neutral-900 font-extralight text-sm md:text-md leading-relaxed text-left"
           style={{ fontWeight: 500 }}
         >
-          I'm a Computer Science Engineering student at{" "}
-          <Underline>RNTU, Bhopal</Underline>, graduating in 2025. With hands-on
-          experience as a Frontend Development Intern at{" "}
-          <Underline>Whatbytes</Underline>, I contributed to modern web solutions
-          using <Underline>Next.js</Underline>.
+          Animesh is a <Underline>Computer Science Engineering</Underline>{" "}
+          student at <Underline>RNTU, Bhopal</Underline>, graduating in 2025. He has
+          hands-on experience as a Frontend Development Intern at{" "}
+          <Underline>WhatBytes</Underline>, where he contributed to building scalable
+          and responsive web applications using <Underline>Next.js</Underline> and{" "}
+          <Underline>Tailwind CSS</Underline>.
         </p>
 
         <p
           className="dark:text-gray-300 text-neutral-900 mt-6 md:mt-10 font-extralight leading-relaxed text-left text-sm md:text-md"
           style={{ fontWeight: 500 }}
         >
-          I specialize in building full-stack web applications using the{" "}
-          <Underline>MERN stack</Underline>. My passion lies in creating{" "}
-          <Underline>scalable</Underline>, <Underline>user-friendly</Underline>{" "}
-          interfaces and integrating real-world functionality into products. I’m
-          especially drawn to exploring <Underline>Generative AI</Underline> and
-          its potential to build smart, impactful software.
+          He specializes in developing full-stack applications using the{" "}
+          <Underline>MERN stack</Underline>, focusing on secure, user-friendly, and
+          performance-driven designs. His passion lies in integrating real-world
+          functionality into products and exploring the possibilities of{" "}
+          <Underline>Generative AI</Underline> to create intelligent, impactful
+          software solutions.
         </p>
       </motion.div>
 
-      {/* GitHub Activity Section (unchanged) */}
+      {/* 💠 GitHub Activity Section */}
       <div className="mt-12 max-w-[98vw] md:w-2xl w-full">
         <motion.h2
           className="text-2xl md:text-2xl font-semibold text-neutral-800 dark:text-white mb-6 text-left"
