@@ -75,18 +75,6 @@ const projects = [
   },
 
   {
-    name: "StreamForge",
-    description:
-      "Real-time Livestream Overlay Platform.",
-    tech: ["React", "Flask", "MongoDB", "TailwindCSS", "FFmpeg", "HLS.js"],
-    image:
-      "https://res.cloudinary.com/dmdlgpurh/image/upload/v1741028881/zg48ye3isoizobkolikp.png",
-    href: "https://github.com/animesh156/LiveStream",
-    
-    videoUrl:
-      "https://res.cloudinary.com/drbrkl0un/video/upload/v1760859919/livestream_1_v7upoi.mp4",
-  },
-  {
     name: "MindWell",
     description: "Mental Wellness & Self-Care Support App",
     tech: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS"],
