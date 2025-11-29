@@ -19,11 +19,11 @@ function About() {
           className="dark:text-gray-300 text-neutral-900 font-extralight text-sm md:text-md leading-relaxed text-left"
           style={{ fontWeight: 500 }}
         >
-          Animesh is a <Underline>Computer Science Engineering</Underline>{" "}
-          student at <Underline>RNTU, Bhopal</Underline>, graduating in 2025. He has
-          hands-on experience as a Frontend Development Intern at{" "}
-          <Underline>WhatBytes</Underline>, where he contributed to building scalable
-          and responsive web applications using <Underline>Next.js</Underline> and{" "}
+          Animesh is a{" "}
+          <Underline>2025 Computer Science Engineering graduate</Underline> from{" "}
+          <Underline>RNTU, Bhopal</Underline>. During his internship at{" "}
+          <Underline>WhatBytes</Underline>, he built user-friendly, responsive,
+          and SEO optimized pages using <Underline>Next.js</Underline> and{" "}
           <Underline>Tailwind CSS</Underline>.
         </p>
 
@@ -32,11 +32,11 @@ function About() {
           style={{ fontWeight: 500 }}
         >
           He specializes in developing full-stack applications using the{" "}
-          <Underline>MERN stack</Underline>, focusing on secure, user-friendly, and
-          performance-driven designs. His passion lies in integrating real-world
-          functionality into products and exploring the possibilities of{" "}
-          <Underline>Generative AI</Underline> to create intelligent, impactful
-          software solutions.
+          <Underline>MERN stack</Underline>, focusing on secure, user-friendly,
+          and performance-driven designs. His passion lies in integrating
+          real-world functionality into products and exploring the possibilities
+          of <Underline>Generative AI</Underline> to create intelligent,
+          impactful software solutions.
         </p>
       </motion.div>
 

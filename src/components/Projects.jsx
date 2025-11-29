@@ -1,5 +1,6 @@
 import React from "react";
 import { PinContainer } from "./PinCard";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import Underline from "./Underline";
 
@@ -26,7 +27,7 @@ const projects = [
     videoUrl:
       "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263827/genCV_zihjx1.mp4",
   },
-   {
+  {
     name: "Chatpy",
     description: "Real-Time Messaging App",
     tech: [
@@ -67,17 +68,12 @@ const projects = [
   {
     name: "Dashboard",
     description: "Real-time dashboard with live data and modern UI.",
-    tech: [
-      "NextJs",
-      "TailwindCSS",
-      "Socket.io",
-    ],
+    tech: ["NextJs", "TailwindCSS", "Socket.io"],
     image:
       "https://res.cloudinary.com/dmdlgpurh/image/upload/v1763282656/Screenshot_450_lmcuej.png",
     href: "https://github.com/animesh156/Random-Dashboard",
     preview: "https://dashboard-seven-pied-46.vercel.app/",
-    videoUrl:
-      "",
+    videoUrl: "",
   },
 
   {
@@ -91,8 +87,7 @@ const projects = [
     videoUrl:
       "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753263699/recyclink_u6i3pe.mp4",
   },
- 
-  
+
   {
     name: "MindWell",
     description: "Mental Wellness & Self-Care Support App",
@@ -105,16 +100,16 @@ const projects = [
       "https://res.cloudinary.com/dcnqzrwkb/video/upload/v1753262596/mindwell_kny2hv.mp4",
   },
 
-   {
+  {
     name: "Weather App",
-    description: "A modern weather app with real-time forecasts, location search, and voice-enabled weather queries.",
+    description:
+      "A modern weather app with real-time forecasts, location search, and voice-enabled weather queries.",
     tech: ["React", "TailwindCSS"],
     image:
       "https://res.cloudinary.com/dmdlgpurh/image/upload/v1763283487/Screenshot_451_kiswb4.png",
     href: "https://github.com/animesh156/Weather-App",
     preview: "https://weather-app-nine-bice-42.vercel.app/",
-    videoUrl:
-      "",
+    videoUrl: "",
   },
 ];
 
@@ -141,7 +136,7 @@ export default function Projects() {
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-        {projects.map((project, i) => (
+        {projects.map((project) => (
           <motion.div
             key={project.name}
             variants={fadeInLeft}
